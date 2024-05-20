@@ -1,9 +1,21 @@
-import React from 'react';
+import React from "react";
 
-const CheckBoxComponents = ({value}) => {
+const CheckBoxComponents = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
 
   return (
-    <input type="checkbox" value={value}/>
+    <label>
+      <input
+        type="checkbox"
+        checked={isChecked}
+        onChange={handleCheckboxChange}
+      />
+      {isChecked ? "Checked" : "Unchecked"}
+    </label>
   );
 };
 
