@@ -1,6 +1,6 @@
 import React from "react";
 
-const CheckBoxComponents = () => {
+const CheckBoxComponents = ({checkBoxLabel}) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -8,14 +8,15 @@ const CheckBoxComponents = () => {
   };
 
   return (
-    <label>
+    <>
+    <label >{checkBoxLabel}</label>
       <input
         type="checkbox"
         checked={isChecked}
         onChange={handleCheckboxChange}
       />
       {isChecked ? "Checked" : "Unchecked"}
-    </label>
+    </>
   );
 };
 
