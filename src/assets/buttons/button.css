@@ -1,0 +1,16 @@
+.custom-button {
+    width: 288px;
+    height: 47px;
+    gap: 0px;
+    border-radius: 6px 0px 0px 0px;
+    opacity: 0px;
+    background: #4CC986;
+    border: none; /* Eliminar borde predeterminado */
+    cursor: pointer; /* Cambia el cursor cuando se pasa por encima */
+    transition: opacity 0.3s ease; /* Añade una transición suave para la opacidad */
+  }
+  
+  .custom-button:hover {
+    opacity: 1; /* Cambia la opacidad al pasar el mouse */
+  }
+  
