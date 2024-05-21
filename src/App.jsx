@@ -1,15 +1,18 @@
-import { useState } from 'react'
-
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
+import Dashboard from './Pages/Dashboard/dashboard.jsx'
 
-function App() {
-  const [count, setCount] = useState(0)
+
+
+export default function App() {
+ 
 
   return (
-    <>
-
-    </>
+    <div className="App">
+            <Routes> 
+        <Route path="/" element={<Dashboard/>}  />
+      </Routes> 
+    
+  </div> 
   )
 }
-
-export default App
