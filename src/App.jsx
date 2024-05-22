@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from './Pages/Home/home'
 import './App.css'
 
+import Button from "./components/buttons/button"
+
 function App() {
 
   return (
