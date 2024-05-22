@@ -1,16 +1,8 @@
-import React from 'react'
-import Icon from './icon'
+import React from 'react';
+import Icon from '../icon/icon';
 
-const IconUsage = ({nombreIcono, colorsito, tamanio}) => 
-{
-  <div>
-  <h1>
-    <Icon uid={nombreIcono} color={colorsito} size={tamanio} valign="middle" />
-  </h1>
-</div>
-}
+const IconUsage = ({ uid, color, size, valign }) => {
+  return <Icon uid={uid} color={color} size={size} valign={valign} />;
+};
 
-
-
-
-export default IconUsage
+export default IconUsage;
