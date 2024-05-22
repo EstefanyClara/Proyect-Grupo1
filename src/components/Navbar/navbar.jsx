@@ -1,21 +1,49 @@
-import {NavLink} from 'react-router-dom'
+import {  useState } from 'react';
 import { Link } from 'react-router-dom'
 import "./navbar.css"
+import { Form, FormControl, Modal, Button} from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { NavLink } from 'react-router-dom';
 
 export const Navbar = () => {
-  
+  const [showModal, setShowModal] = useState(false);
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
+  const handleLogout = () => {
+    console.log('Logging out');
+    handleClose();
+  };
+
     
   return (
     <nav>
-      <Link to="/" className="title">Home</Link>
-        <ul>
-            <li>
-                <NavLink to="/logOut">Log out</NavLink>
-            </li>
-        </ul>
+      <Link to="/dashboard">
+        <img src="src\assets\images\Logo.png" alt="Logo" />
+      </Link>          
+      <Form inline className='search-form'>
+      <FormControl  type="text" placeholder="Search" className="mr-sm-2" />
+      </Form>
+      <ul>
+        <li>
+        <Button variant="outline-light" onClick={handleShow} className="logout-button">Log out</Button>
+          <img className='userImage' src="src\assets\images\user.png" alt="Log out" />
+        </li>
+      </ul> 
 
-        <h1>Home </h1>
-        
+      <Modal show={showModal} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Log out</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Are you sure you want to log out?</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleLogout}>
+           <NavLink to="/" className="nav-link">Log out</NavLink>
+          </Button>
+        </Modal.Footer>   
+      </Modal> 
     </nav>
-  )
+  );
 }
