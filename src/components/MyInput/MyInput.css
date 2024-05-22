@@ -1,27 +1,30 @@
-.MyInput {
-    width: 22.625rem;
-    height: 2.9375rem;
+.my-input {
+    width: 21.625rem;
+    height: 2.3375rem;
     flex-shrink: 0;
+    margin:1rem;
 
-    border-radius: 0.25rem;
-    background: #F1F1F1;
+    border: none;
+    background: #FFF;
+
 
     display: flex;
-    width: 20.625rem;
-    height: 1.61563rem;
     flex-direction: column;
     justify-content: center;
-    flex-shrink: 0;
-
-    color: #939393;
-    font-size: 0.9375rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    padding: 0rem 1rem;
 }
 
-*:disabled {
-    background-color: dimgrey;
-    color: linen;
-    opacity: 1;
+input:disabled {
+    background-color: #F1F1F1;
+    color: #939393;
+}
+
+input:placeholder-shown {
+    color: #939393;
+}
+
+input:focus {
+    border: solid;
+    border-radius: 1px;
+    border-color: #36B972;
 }
