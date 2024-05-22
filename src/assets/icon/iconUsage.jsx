@@ -1,10 +1,9 @@
 import Icon from './icon'
 
-const MyPage = () => <div>
+const IconUsage = ({nombreIcono, colorsito, tamanio}) => <div>
   <h1>
-    Hello Zest!
-    <Icon uid="smiling-face" color="#f09" size="48" valign="middle" />
+    <Icon uid={nombreIcono} color={colorsito} size={tamanio} valign="middle" />
   </h1>
 </div>
 
-export default MyPage
+export default IconUsage
