@@ -2,7 +2,6 @@ import React from 'react'
 import ZestIcons from 'zest-free'
 
 const Icon = ({uid, size=24, color='', valign, className}) => {
-  console.log('en el icon me tira' + uid);
   let paths
   let style = {}
   if (uid in ZestIcons) {
