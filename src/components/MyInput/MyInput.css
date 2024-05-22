@@ -1,0 +1,27 @@
+.MyInput {
+    width: 22.625rem;
+    height: 2.9375rem;
+    flex-shrink: 0;
+
+    border-radius: 0.25rem;
+    background: #F1F1F1;
+
+    display: flex;
+    width: 20.625rem;
+    height: 1.61563rem;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+
+    color: #939393;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+*:disabled {
+    background-color: dimgrey;
+    color: linen;
+    opacity: 1;
+}
