@@ -21,7 +21,7 @@ export const Navbar = () => {
         <img src="src\assets\images\Logo.png" alt="Logo" />
       </Link>          
       <Form inline className='search-form'>
-      <FormControl  type="text" placeholder="Search" className="mr-sm-2" />
+        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
       </Form>
       <ul>
         <li>
@@ -31,16 +31,14 @@ export const Navbar = () => {
       </ul> 
 
       <Modal show={showModal} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Log out</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Are you sure you want to log out?</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
+        <img className='iconLogout' src='src\assets\images\man-and-opened-exit-door.png'/>
+        <Modal.Body className='modalText'>Oh no! You're leaving...<br/>Are you sure? </Modal.Body>
+        <Modal.Footer className='modal-footer-vertical'>
+          <Button variant='primary' onClick={handleClose}>
+            Naah, Just Kidding
           </Button>
-          <Button variant="primary" onClick={handleLogout}>
-           <NavLink to="/" className="nav-link">Log out</NavLink>
+          <Button variant="outline-secondary" onClick={handleLogout}>
+           <NavLink to="/" className="nav-link">Yes, Log Me Out</NavLink>
           </Button>
         </Modal.Footer>   
       </Modal> 
