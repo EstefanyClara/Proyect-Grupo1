@@ -32,7 +32,7 @@ export const Navbar = () => {
 
       <Modal show={showModal} onHide={handleClose}>
         <img className='iconLogout' src='src\assets\images\man-and-opened-exit-door.png'/>
-        <Modal.Body className='modalText'>Oh no! You're leaving...<br/>Are you sure? </Modal.Body>
+        <Modal.Body className='modalText'>Oh no! You are leaving...<br/>Are you sure? </Modal.Body>
         <Modal.Footer className='modal-footer-vertical'>
           <Button variant='primary' onClick={handleClose}>
             Naah, Just Kidding
