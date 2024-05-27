@@ -6,8 +6,6 @@ import Button from '../../components/buttons/button';
 import { ThemeContext } from "../../components/context/context";
 import Switch from '../../components/switch/switch';
 
-import { ThemeContext } from "../../components/context/index";
-import { Button } from 'bootstrap';
 import MyModal from "../../components/Modal/MyModal"
 
 const Home = () => {
