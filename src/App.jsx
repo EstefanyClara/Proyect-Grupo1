@@ -1,20 +1,19 @@
-import { Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from './Pages/Home/home'
 import './App.css'
-import {Dashboard}  from './Pages/Dashboard/dashboard.jsx'
-import {Home} from './Pages/Home/home.jsx'
 
-
-
-export default function App() {
- 
+function App() {
+  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <Routes> 
-        <Route path="/" element={<Home/>}  />
-        <Route path="/dashboard" element={<Dashboard/>}  />
-      </Routes> 
-    
-  </div> 
+    <ThemeContext.Provider value={themeSettings}>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Home />} path="/" exact />
+      </Routes>
+    </BrowserRouter>
+    </ThemeContext.Provider>
   )
 }
+
+export default App
