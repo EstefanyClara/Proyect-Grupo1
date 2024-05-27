@@ -1,4 +1,3 @@
-import React from 'react';
 import { Routes } from 'react-router-dom';
 import Button from '../../components/buttons/button';
 import { ThemeContext } from "../../components/context/context";

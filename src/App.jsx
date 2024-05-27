@@ -3,19 +3,32 @@ import Home from './Pages/Home/home'
 import './App.css'
 import { ThemeContext } from './components/context/context'
 import { useState } from 'react'
+import Dashboard from './Pages/Dashboard/dashboard'
+
 
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [themeSettings, setThemeSettings] = useState({
+    mode: "light",
+    switchMode: () => {
+      setThemeSettings((prevState)=>({
+        ...prevState,
+        mode: prevState.mode === "light" ? "dark" : "light",
+      }));   
+    },
+  });
+
+  
 
   return (
     <ThemeContext.Provider value={themeSettings}>
-    <BrowserRouter>
       <Routes>
+       
         <Route element={<Home />} path="/" exact />
+        <Route element={<Dashboard />} path="/dashboard" exact />
       </Routes>
-    </BrowserRouter>
     </ThemeContext.Provider>
   )
 }
