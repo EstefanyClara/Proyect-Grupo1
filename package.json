@@ -10,12 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@expo-google-fonts/exo-2": "^0.2.3",
+    "@fontsource/exo-2": "^5.0.18",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "bootstrap": "^5.3.3",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1",
     "react-router-dom": "^6.23.1",
-    "sort-by": "^1.2.0",
+    "sort-by": "^0.0.2",
     "zest-free": "^1.4.1"
   },
   "devDependencies": {
