@@ -8,14 +8,22 @@ import { useState } from 'react'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [themeSettings, setThemeSettings] = useState({
+    mode: "light",
+    switchMode: () => {
+      setThemeSettings((prevState) => ({
+        ...prevState,
+        mode: prevState.mode === "light" ? "dark" : "light",
+      }));
+    },
+  });
 
+  
   return (
     <ThemeContext.Provider value={themeSettings}>
-    <BrowserRouter>
       <Routes>
         <Route element={<Home />} path="/" exact />
       </Routes>
-    </BrowserRouter>
     </ThemeContext.Provider>
   )
 }
