@@ -1,0 +1,42 @@
+.my-nav {
+    width: 200px;
+}
+
+.my-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+.my-nav-link-sub {
+    display: flex;
+    align-items: center;
+    padding: 5px 25px;
+    color: #333;
+    text-decoration: none;
+    font-weight: normal;
+   
+}
+
+.my-nav-link:hover {
+    background-color: #f8f9fa;
+    color: #4CC986;
+    
+}
+.my-nav-link-sub:hover {
+    background-color: #f8f9fa;
+    color: #4CC986;
+    
+}
+
+.my-nav-link .me-2{
+    margin-right: 8px;
+    
+}
+
+.my-nav-link.active {
+    color: #4CC986;
+    font-weight: bold;
+}
