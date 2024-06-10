@@ -1,12 +1,13 @@
 import React from 'react';
+import { Navbar } from 'react-bootstrap';
 
-const ComponentName = () => {
+const GameDetails = () => {
     return (
         <div>
-            <h1>Page Name</h1>
-            <p>Component Content</p>
+            <Navbar></Navbar>
+            <h1>Game Name</h1>
         </div>
     );
 };
 
-export default ComponentName;
+export default GameDetails;
