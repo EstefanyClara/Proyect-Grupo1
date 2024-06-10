@@ -4,6 +4,7 @@ export const getGames = async () => {
       const response = await fetch(url);
       if (response.ok) {
         const payload = await response.json();
+        console.log(payload);
         return payload;
       } else {
         console.error("An error happened");
