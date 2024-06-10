@@ -1,0 +1,30 @@
+.my-input {
+    width: 21.625rem;
+    height: 2.3375rem;
+    flex-shrink: 0;
+    margin:1rem;
+
+    border: none;
+    background: #FFF;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0rem 1rem;
+}
+
+input:disabled {
+    background-color: #F1F1F1;
+    color: #939393;
+}
+
+input:placeholder-shown {
+    color: #939393;
+}
+
+input:focus {
+    border: solid;
+    border-radius: 1px;
+    border-color: #36B972;
+}
