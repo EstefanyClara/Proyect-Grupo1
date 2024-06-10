@@ -1,7 +1,7 @@
 import { Navbar } from "../../components/Navbar/navbar";
 import "./dashboard.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {MyNav} from "../../components/Nav/myNav";
+import {LogoutModal} from "../../components/LogoutModal/LogoutModal";
 
 
 export const Dashboard = () => {
@@ -11,7 +11,7 @@ export const Dashboard = () => {
             <Navbar/>
             <h1> New And Trending </h1>
             <p> Based on player couts and release date</p>
-            <MyNav/>
+            <LogoutModal/>
         </div>
     );
 }; export default Dashboard;

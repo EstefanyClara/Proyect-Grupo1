@@ -1,10 +1,10 @@
-import "./myNavStyle.css";
+import "./LogoutModal.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faStar, faClock, faSearch, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
-export const MyNav = () => {
+export const LogoutModal = () => {
     return (
         <div>
             <Nav defaultActiveKey="/dashboard" className="flex-column my-nav">
@@ -44,3 +44,5 @@ export const MyNav = () => {
         </div>
     );
 };
+
+export default LogoutModal
