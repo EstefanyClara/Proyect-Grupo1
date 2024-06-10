@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState } from 'react'
-import gameDetails from './Pages/GameDetails/gamedetails'
+//import gameDetails from './Pages/GameDetails/gamedetails'
 import { ThemeContext } from './components/context/context'
 import './App.css'
 // Pages
@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route element={<Home />} path="/" exact />
         <Route element={<Dashboard />} path="/dashboard" exact />
-        <Route element={<gameDetails />} path="/gamedetails" exact />
+        
       </Routes>
     </ThemeContext.Provider>
   )
