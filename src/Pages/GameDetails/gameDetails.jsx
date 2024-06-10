@@ -1,11 +1,13 @@
 import React from 'react';
-import { Navbar } from 'react-bootstrap';
+
+import NavBarSimple from '../../components/NavBarSimple/NavBarSimple';
 
 const GameDetails = () => {
     return (
         <div>
-            <Navbar></Navbar>
+            <NavBarSimple />
             <h1>Game Name</h1>
+            
         </div>
     );
 };
