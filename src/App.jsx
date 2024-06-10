@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from './Pages/Home/home'
 import Dashboard from './Pages/Dashboard/dashboard'
-import gameDetails from './Pages/gameDetails/gameDetails'
 import './App.css'
 import { ThemeContext } from './components/context/context'
 import { useState } from 'react'

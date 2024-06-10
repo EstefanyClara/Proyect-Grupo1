@@ -21,3 +21,4 @@ const CheckBoxComponents = ({checkBoxLabel}) => {
 };
 
 export default CheckBoxComponents;
+ 
