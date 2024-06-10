@@ -6,8 +6,6 @@ import './App.css'
 import { ThemeContext } from './components/context/context'
 import { useState } from 'react'
 
-
-
 function App() {
   const [themeSettings, setThemeSettings] = useState({
     mode: "light",
