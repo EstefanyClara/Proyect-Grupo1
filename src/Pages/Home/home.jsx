@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { Routes } from 'react-router-dom';
+import { Routes, Link } from 'react-router-dom';
 import { ThemeContext } from "../../components/context/context";
 import MyInput from '../../components/MyInput/MyInput';
 import Button from '../../components/buttons/button';
@@ -17,16 +17,13 @@ const Home = () => {
             <Button iconName="facebook" iconColor="#f09" iconSize="24"  >Login with Facebook </Button>
             <Button estilo={'social-media-style-button-ligth'} iconName="twitter" iconColor="#f09" iconSize="24"  >Login with Twitter </Button>
             <Button estilo={'social-media-style-button-ligth'} iconName="google" iconColor="#f09" iconSize="24"  >Login with Google </Button>
+            <Link to="/gamedetails">
+                <Button estilo={'custom-button-ligth'}>Game Details</Button>
+            </Link>
+            <Link to="/dashboard">
+                <Button estilo={'custom-button-ligth'}>Dashboard</Button>
+            </Link>
 
-            <div>
-                <h1>Game Finder</h1>
-                <button onClick={() => setShow(true)}>
-                    Custom Width Modal
-                </button>
-                <MyModal title="titulo" show={show}>
-                    <p>Textoooo</p>
-                </MyModal>
-            </div>
         </div>
     );
 };
