@@ -1,9 +1,8 @@
 import { React, useState } from 'react';
-
-import MyInput from '../../components/MyInput/MyInput';
-import { Routes } from 'react-router-dom';
-import Button from '../../components/buttons/button';
+import { Routes, Link } from 'react-router-dom';
 import { ThemeContext } from "../../components/context/context";
+import MyInput from '../../components/MyInput/MyInput';
+import Button from '../../components/buttons/button';
 import Switch from '../../components/switch/switch';
 import { getGames } from '../../api';
 import MyModal from "../../components/Modal/MyModal"
@@ -22,6 +21,13 @@ const Home = () => {
             <Button iconName="facebook" iconColor="#f09" iconSize="24"  >Login with Facebook </Button>
             <Button estilo={'social-media-style-button-ligth'} iconName="twitter" iconColor="#f09" iconSize="24"  >Login with Twitter </Button>
             <Button estilo={'social-media-style-button-ligth'} iconName="google" iconColor="#f09" iconSize="24"  >Login with Google </Button>
+            <Link to="/gamedetails">
+                <Button estilo={'custom-button-ligth'}>Game Details</Button>
+            </Link>
+            <Link to="/dashboard">
+                <Button estilo={'custom-button-ligth'}>Dashboard</Button>
+            </Link>
+
             
             <div>
                 <h1>Game Finder</h1>
