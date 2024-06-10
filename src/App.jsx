@@ -19,14 +19,10 @@ function App() {
       }));   
     },
   });
-
-  
-
   
   return (
     <ThemeContext.Provider value={themeSettings}>
       <Routes>
-       
         <Route element={<Home />} path="/" exact />
         <Route element={<Dashboard />} path="/dashboard" exact />
         <Route element={<gameDetails />} path="/gameDetails" exact />

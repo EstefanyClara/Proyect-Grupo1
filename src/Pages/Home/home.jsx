@@ -1,11 +1,9 @@
 import { React, useState } from 'react';
-
-import MyInput from '../../components/MyInput/MyInput';
 import { Routes } from 'react-router-dom';
-import Button from '../../components/buttons/button';
 import { ThemeContext } from "../../components/context/context";
+import MyInput from '../../components/MyInput/MyInput';
+import Button from '../../components/buttons/button';
 import Switch from '../../components/switch/switch';
-
 import MyModal from "../../components/Modal/MyModal"
 
 const Home = () => {
