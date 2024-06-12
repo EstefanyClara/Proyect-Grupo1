@@ -1,10 +1,10 @@
-import { Navbar } from "../../components/Navbar/NavBar";
+import { Navbar } from "../../components/Navbar/navbar";
 import "./dashboard.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {LogoutModal} from "../../components/LogoutModal/LogoutModal";
 
 
-export const Dashboard = () => {
+export const DashBoard = () => {
 
     return (
         <div>
@@ -14,4 +14,4 @@ export const Dashboard = () => {
             <LogoutModal/>
         </div>
     );
-}; export default Dashboard;
+}; export default DashBoard;
