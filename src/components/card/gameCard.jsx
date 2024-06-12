@@ -3,26 +3,26 @@ import React, { useState, useEffect } from 'react';
 const GameCard = ({ gameId }) => {
   const [gameData, setGameData] = useState(null);
 
-  useEffect(() => {
-    const fetchGameData = async () => {
-      try {
-        const response = await fetch(`API_ENDPOINT/${gameId}`);
-        const data = await response.json();
-        setGameData(data);
-      } catch (error) {
-        console.error('Error fetching game data:', error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchGameData = async () => {
+  //     try {
+  //       const response = await fetch(`API_ENDPOINT/${gameId}`);
+  //       const data = await response.json();
+  //       setGameData(data);
+  //     } catch (error) {
+  //       console.error('Error fetching game data:', error);
+  //     }
+  //   };
 
-    fetchGameData();
-  }, [gameId]);
+  //   fetchGameData();
+  // }, [gameId]);
 
   if (!gameData) {
     return <div>Loading...</div>;
   }
 
   return (
-    <div className="card">
+    <div className="card" onClick={() => setGameData(null)}>
       <img src={gameData.image} alt={gameData.name} />
       <h2>{gameData.name}</h2>
       <p>{gameData.description}</p>
