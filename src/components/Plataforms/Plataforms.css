@@ -1,0 +1,20 @@
+.plataform-light {
+    display: flex;
+    gap: 10px;
+
+    img {
+        width: 24px;
+        height: 24px;
+        margin: 0px;
+        /* filter: invert(100%) */
+    }
+}
+
+.plataform-dark {
+    img {
+        width: 24px;
+        height: 24px;
+        margin: 0px;
+        filter: invert(100%);
+    }
+}
