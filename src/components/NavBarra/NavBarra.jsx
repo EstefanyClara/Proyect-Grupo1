@@ -1,11 +1,11 @@
 import {  useState } from 'react';
 import { Link } from 'react-router-dom'
-import "./navbar.css"
+import "./NavBarra.css"
 import { Form, FormControl, Modal, Button} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-router-dom';
 
-export const Navbar = () => {
+export const NavBarra = () => {
   const [showModal, setShowModal] = useState(false);
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
@@ -46,4 +46,4 @@ export const Navbar = () => {
   );
 }
 
-export default Navbar
+export default NavBarra
