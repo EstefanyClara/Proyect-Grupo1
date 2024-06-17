@@ -4,11 +4,13 @@ import "./NavBarSimple.css"
 import { Form, FormControl, Modal } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-router-dom';
-import Button from '../Buttons/Button';
+import Button from '../buttons/button';
+
 export const NavBarSimple = () => {
     const [showModal, setShowModal] = useState(false);
     const handleClose = () => setShowModal(false);
     const handleShow = () => setShowModal(true);
+    
 
 
 
