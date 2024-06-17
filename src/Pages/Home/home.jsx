@@ -6,13 +6,13 @@ import Button from '../../components/buttons/button';
 import Switch from '../../components/switch/switch';
 import { getGames } from '../../api';
 import MyModal from "../../components/Modal/MyModal"
-
+import "./home.css"
 
 
 const Home = () => {
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(true); 
     return (
-        <div>
+        <div className='First-div'>
             <Switch></Switch>
             <h1>Game Finder</h1>
             <MyInput></MyInput>

@@ -6,6 +6,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../../components/context/context";
 
 
+
 export const Dashboard = () => {
     const themeSettings = useContext(ThemeContext);
     return (
@@ -15,7 +16,9 @@ export const Dashboard = () => {
             <h1> New And Trending </h1>
             <p> Based on player couts and release date</p>
             <LogoutModal/>
+            
         </div>
+        
         </body>
     );
 }; export default Dashboard;

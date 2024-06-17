@@ -1,6 +1,6 @@
 import {  useState } from 'react';
 import { Link } from 'react-router-dom'
-import "./navbarra.css"
+import "./NavBarra.css"
 import { Form, FormControl, Modal, Button} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-router-dom';
