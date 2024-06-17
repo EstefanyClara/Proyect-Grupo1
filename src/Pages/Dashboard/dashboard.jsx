@@ -1,4 +1,4 @@
-import { Navbarra } from "../../components/Navbarra/navbarra";
+import { Navbarra } from "../../components/NavBarra/NavBarra";
 import "./dashboard.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {LogoutModal} from "../../components/LogoutModal/LogoutModal";
