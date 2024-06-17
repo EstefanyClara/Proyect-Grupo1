@@ -1,6 +1,6 @@
 import "./DashBoard.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { LogoutModal } from "../../ComponentsS/LogoutModal/LogoutModal";
+import { LogoutModal } from "../../Components/LogoutModal/LogoutModal";
 
 export const DashBoard = () => {
   return (

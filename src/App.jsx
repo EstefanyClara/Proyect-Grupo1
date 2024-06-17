@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState } from 'react'
 import GameDetails from './Pages/GameDetails/GameDetails'
-import { ThemeContext } from './ComponentsS/Context/Context'
+import { ThemeContext } from './Components/Context/Context'
 import DashBoard from "./Pages/Dashboard/DashBoard"
 import './App.css'
 // Pages
