@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
 import "./NavBarSimple.css"
-import { Form, FormControl, Modal } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { NavLink } from 'react-router-dom';
 import Button from '../Buttons/Button';
 
 export const NavBarSimple = () => {

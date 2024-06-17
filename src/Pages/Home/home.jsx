@@ -1,11 +1,10 @@
 import { React, useState } from "react";
 import { Routes, Link } from "react-router-dom";
-import { ThemeContext } from "../../Componentss/Context/Context";
-import MyInput from "../../Componentss/MyInput/MyInput";
-import Button from "../../Componentss/Buttons/Button"
-import Switch from "../../Componentss/Switch/Switch";
-import { getGames } from "../../api";
-import MyModal from "../../Componentss/Modal/MyModal";
+import { ThemeContext } from "../../Components/Context/Context";
+import MyInput from "../../Components/MyInput/MyInput";
+import Button from "../../Components/Buttons/Button"
+import Switch from "../../Components/Switch/Switch";
+import MyModal from "../../Components/Modal/MyModal";
 
 const Home = () => {
   const [show, setShow] = useState(true);
