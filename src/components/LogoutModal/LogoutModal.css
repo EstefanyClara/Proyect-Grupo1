@@ -2,7 +2,7 @@
     width: 200px;
 }
 
-.my-nav-link {
+.my-nav-link-light {
     display: flex;
     align-items: center;
     padding: 10px 15px;
@@ -10,7 +10,7 @@
     text-decoration: none;
     font-weight: 500;
 }
-.my-nav-link-sub {
+.my-nav-link-sub-light{
     display: flex;
     align-items: center;
     padding: 5px 25px;
@@ -19,24 +19,89 @@
     font-weight: normal;
    
 }
+.my-nav-link-dark {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+.my-nav-link-sub-dark{
+    display: flex;
+    align-items: center;
+    padding: 5px 25px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: normal;
+   
+}
 
-.my-nav-link:hover {
-    background-color: #f8f9fa;
+.my-nav-link-light:hover {
     color: #4CC986;
     
 }
-.my-nav-link-sub:hover {
-    background-color: #f8f9fa;
+.my-nav-link-sub-light:hover {
+    color: #4CC986;
+    
+}
+.my-nav-link-dark:hover {
+    color: #4CC986;
+    
+}
+.my-nav-link-sub-dark:hover {
     color: #4CC986;
     
 }
 
-.my-nav-link .me-2{
+.my-nav-link-light .me-2{
     margin-right: 8px;
+    color: #4CC986;
     
 }
 
-.my-nav-link.active {
+.my-nav-link-light.active {
     color: #4CC986;
     font-weight: bold;
+    background: transparent;
+    border: 1px solid #4CC986;
+    box-shadow: 0 0 10px #4CC986, 0 0 10px #4CC986, 0 0 30px #4CC986, 0 0 40px #4CC986;
+    padding: 5px 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.my-nav-link-sub-light.active {
+    color: #4CC986;
+    font-weight: bold;
+    background: transparent;
+    border: 1px solid #4CC986;
+    box-shadow: 0 0 10px #4CC986, 0 0 10px #4CC986, 0 0 30px #4CC986, 0 0 40px #4CC986;
+    padding: 5px 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.my-nav-link-dark.active {
+    color: #4CC986;
+    font-weight: bold;
+    background: transparent;
+    border: 1px solid #4CC986;
+    box-shadow: 0 0 10px #4CC986, 0 0 10px #4CC986, 0 0 30px #4CC986, 0 0 40px #4CC986;
+    padding: 5px 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.my-nav-link-sub-dark.active {
+    color: #4CC986;
+    font-weight: bold;
+    background: transparent;
+    border: 1px solid #4CC986;
+    box-shadow: 0 0 10px #4CC986, 0 0 10px #4CC986, 0 0 30px #4CC986, 0 0 40px #4CC986;
+    padding: 5px 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
 }

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState } from 'react'
-import GameDetails from './Pages/GameDetails/gamedetails'
+import GameDetails from './Pages/GameDetails/gameDetails'
 import { ThemeContext } from './components/context/context'
 import './App.css'
 // Pages

@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 import { Routes, Link } from 'react-router-dom';
 import { ThemeContext } from "../../components/context/context";
 import MyInput from '../../components/MyInput/MyInput';
-import Button from '../../components/Buttons/Button';
+import Button from '../../components/buttons/button';
 import Switch from '../../components/switch/switch';
 import { getGames } from '../../api';
 import MyModal from "../../components/Modal/MyModal"

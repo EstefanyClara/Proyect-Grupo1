@@ -1,5 +1,5 @@
 import React from 'react';
-import './Button.css'; // Importa el archivo CSS
+import './button.css'; // Importa el archivo CSS
 import IconUsage from '../icon/iconUsage';
 import { useContext } from "react";
 import { ThemeContext } from "../context/context";

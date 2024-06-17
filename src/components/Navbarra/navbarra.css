@@ -20,7 +20,12 @@ nav ul {
     padding: 0;
     list-style: none;
 }
-.search-form {
+.search-form-light {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+.search-form-dark {
     flex-grow: 1;
     display: flex;
     justify-content: center;
