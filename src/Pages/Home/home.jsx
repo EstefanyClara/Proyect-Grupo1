@@ -1,10 +1,10 @@
 import { React, useState } from "react";
 import { Routes, Link } from "react-router-dom";
-import { ThemeContext } from "../../Components/Context/Context";
-import MyInput from "../../Components/MyInput/MyInput";
-import Button from "../../Components/Buttons/Button"
-import Switch from "../../Components/Switch/Switch";
-import MyModal from "../../Components/Modal/MyModal";
+import { ThemeContext } from "../../ComponentsS/Context/Context";
+import MyInput from "../../ComponentsS/MyInput/MyInput";
+import Button from "../../ComponentsS/Buttons/Button"
+import Switch from "../../ComponentsS/Switch/Switch";
+import MyModal from "../../ComponentsS/Modal/MyModal";
 
 const Home = () => {
   const [show, setShow] = useState(true);

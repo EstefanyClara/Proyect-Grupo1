@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect, useContext } from "react";
-import NavBarSimple from "../../Components/NavBarSimple/NavBarSimple";
+import NavBarSimple from "../../ComponentsS/NavBarSimple/NavBarSimple";
 
-import { ThemeContext } from "../../Components/Context/Context";
+import { ThemeContext } from "../../ComponentsS/Context/Context";
 import { getGame } from "../../Api/Index";
 
 
