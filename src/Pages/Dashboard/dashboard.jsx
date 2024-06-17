@@ -1,7 +1,7 @@
-import { NavBarra} from "../../Components/NavBarra/NavBarra";
+import { NavBarra} from "../../Componentss/NavBarra/NavBarra";
 import "./DashBoard.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { LogoutModal } from "../../Components/LogoutModal/LogoutModal";
+import { LogoutModal } from "../../Componentss/LogoutModal/LogoutModal";
 
 export const DashBoard = () => {
   return (

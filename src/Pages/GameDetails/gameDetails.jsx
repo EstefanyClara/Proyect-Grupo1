@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect, useContext } from "react";
-import NavBarSimple from "../../Components/NavBarSimple/NavBarSimple";
+import NavBarSimple from "../../Componentss/NavBarSimple/NavBarSimple";
 
-import { ThemeContext } from "../../Components/Context/Context";
+import { ThemeContext } from "../../Componentss/Context/Context";
 import { getGame } from "../../api";
 const GameDetails = (gameId) => {
   const [gameData, setGameData] = useState(null);
