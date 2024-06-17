@@ -4,16 +4,11 @@ import "./NavBarra.css"
 import { Form, FormControl, Modal, Button} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-router-dom';
-import Switch from '../switch/switch'; 
-import { ThemeContext } from '../context/context';
+import Switch from '../Switch/Switch'; 
+import { ThemeContext } from '../Context/Context';
 import { useContext } from 'react';
 
-<<<<<<<< HEAD:src/components/NavBarra/NavBarra.jsx
 export const NavBarra = () => {
-========
-
-export const Navbarra = () => {
->>>>>>>> dashboard:src/components/Navbarra/navbarra.jsx
   const [showModal, setShowModal] = useState(false);
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
@@ -59,10 +54,9 @@ export const Navbarra = () => {
       
     </nav>
   );
-}
+};
 
-<<<<<<<< HEAD:src/components/NavBarra/NavBarra.jsx
-export default NavBarra
-========
-export default Navbarra
->>>>>>>> dashboard:src/components/Navbarra/navbarra.jsx
+
+
+export default NavBarra;
+

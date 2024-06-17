@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState } from 'react'
-import GameDetails from './Pages/GameDetails/gameDetails'
-import { ThemeContext } from './components/context/context'
+import GameDetails from './Pages/GameDetails/GameDetails'
+import { ThemeContext } from './Components/Context/Context'
+import DashBoard from "./Pages/DashBoard/DashBoard"
 import './App.css'
 // Pages
-import Home from './Pages/Home/home'
-import Dashboard from './Pages/Dashboard/dashboard'
+import Home from './Pages/Home/Home'
+
 
 function App() {
 
@@ -23,7 +24,7 @@ function App() {
     <ThemeContext.Provider value={themeSettings}>
       <Routes>
         <Route element={<Home />} path="/" exact />
-        <Route element={<Dashboard />} path="/dashboard" exact />
+        <Route element={<DashBoard />} path="/dashboard" exact />
         <Route element={<GameDetails />} path="/gamedetails" exact />
       </Routes>
     </ThemeContext.Provider>

@@ -4,7 +4,7 @@ import { Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faStar, faClock, faSearch, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { useContext } from 'react';
-import { ThemeContext } from '../context/context';
+import { ThemeContext } from '../Context/Context';
 
 export const LogoutModal = () => {
     const themeSettings = useContext(ThemeContext);
