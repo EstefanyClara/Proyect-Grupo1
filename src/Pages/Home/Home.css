@@ -1,4 +1,154 @@
-.First-div {
-  background-image: url("src/assets/images/background.jpg");
+body{
+  background-image: url("src/assets/images/background-dark.jpeg");
   background-size: cover;
+}
+.main-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.login-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  color: #fff;
+  margin-right: 100px;
+  margin-top: 100px;
+}
+
+.login-container h2 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  text-align: center;
+}
+.login-container p {
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: white 1px solid;
+  border-radius: 10px;
+}
+
+.login-container .remember-me {
+  display: flex;
+  justify-content: space-between; /* Asegura que los elementos estén alineados a los extremos */
+  align-items: center;
+  margin: 10px 0;
+}
+
+.remember-me label {
+  margin: 0;
+  font-size: 16px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.login-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  justify-content: center;
+  background-color: #00bfa5;
+}
+
+.login-container a {
+  color: #00bfa5;
+  text-decoration: none;
+}
+
+.social-media-buttons button {
+  width: 100%;
+  padding: 20px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.forgot-password {
+  margin-left: auto; 
+}
+
+.forgot-password:hover, .register-but:hover{
+  color: rgb(0, 60, 255);
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ffffff;
+}
+
+.separator:not(:empty)::before {
+  margin-right: .25em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: .25em;
+}
+
+.separator span {
+  color: #ffffff;
+  padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 10px;
+  }
+  .login-container {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 50px;
+    padding: 15px;
+  }
+  .login-container input[type="email"],
+  .login-container input[type="password"] {
+    padding: 8px;
+  }
+  .social-media-buttons button {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 10px;
+  }
+  .login-container input[type="email"],
+  .login-container input[type="password"] {
+    padding: 6px;
+  }
+  .social-media-buttons button {
+    padding: 8px;
+  }
 }
