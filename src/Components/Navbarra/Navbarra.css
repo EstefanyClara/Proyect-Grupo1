@@ -113,3 +113,25 @@ img{
     border: none;
     color: white;
 }
+
+.plain-mode-dark{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent
+}
+
+.plain-mode-light{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur(2px);
+    padding: 0 1rem;
+}
+
+.logo-image {
+    width: 250px; /* Puedes ajustar estos valores según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-top: 10px;
+  }
