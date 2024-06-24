@@ -1,11 +1,12 @@
 import {  useState } from 'react';
 import { Link } from 'react-router-dom'
-import "./navbar.css"
+import "./Navbarra.css"
 import { Form, FormControl, Modal, Button} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-router-dom';
+import Switch from "../../Components/Switch/Switch";
 
-export const Navbar = () => {
+export const Navbarra = ({isPlain}) => {
   const [showModal, setShowModal] = useState(false);
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
@@ -16,6 +17,15 @@ export const Navbar = () => {
 
     
   return (
+    <>
+    {isPlain ? 
+    <div className='plain-mode-dark'> 
+      <div>
+        <img src="src\assets\images\GAMEFINDER.png" alt="Logo" className="logo-image" />
+      </div>
+      <Switch ></Switch>        
+    </div>
+    :
     <nav>
       <Link to="/dashboard">
         <img src="src\assets\images\Logo.png" alt="Logo" />
@@ -42,8 +52,10 @@ export const Navbar = () => {
           </Button>
         </Modal.Footer>   
       </Modal> 
-    </nav>
+    </nav>} 
+
+    </>
   );
 }
 
-export default Navbar
+export default Navbarra

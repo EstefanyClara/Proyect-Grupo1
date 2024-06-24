@@ -2,6 +2,8 @@ import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./MyModal.css"
+
+
 const MyModal = ({ title, children, show }) => {
     return (
         <>

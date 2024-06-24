@@ -1,10 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
-import { ThemeContext } from "./components/context/context";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { useState } from 'react'
+import GameDetails from './Pages/GameDetails/GameDetails'
+import { ThemeContext } from './Components/Context/Context'
+import DashBoard from "./Pages/Dashboard/DashBoard"
+import './App.css'
 // Pages
-import Home from "./Pages/Home/home";
-import DashBoard from "./Pages/Dashboard/dashboard";
+import Home from './Pages/Home/Home'
+
 
 function App() {
   const [themeSettings, setThemeSettings] = useState({
@@ -22,6 +24,7 @@ function App() {
       <Routes>
         <Route element={<Home />} path="/" exact />
         <Route element={<DashBoard />} path="/dashboard" exact />
+        <Route element={<GameDetails />} path="/gamedetails" exact />
       </Routes>
     </ThemeContext.Provider>
   );

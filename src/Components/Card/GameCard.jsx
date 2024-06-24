@@ -28,7 +28,7 @@ const GameCard = ({ gameId }) => {
       <p>{gameData.description}</p>
       <p>Released: {gameData.releaseDate}</p>
       <p>Genres: {gameData.genres}</p>
-      <p>{gameData.ranking}</p>
+      <p>{gameData.index}</p>
       <p>{gameData.compatibility}</p>
     </div>
   );
