@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
-import { getGame } from "../../api";
-import { ThemeContext } from "../context/context";
+import { getGame } from "../../Api/Index";
+import { ThemeContext } from "../Context/Context";
 import NavBarSimple from "../NavBarSimple/NavBarSimple";
 import Skeleton from "../MySkeleton/MySkeleton";
 import Plataforms from "../Plataforms/Plataforms";
@@ -30,7 +30,6 @@ const GameDetails = (gameId) => {
   return (
     <>
       <NavBarSimple />
-
       <div className="container">
         <div
           className={`game-details game-details-${themeSettings.mode}`}
