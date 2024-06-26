@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
-import MySkeleton from "../MySkeleton/MySkeleton";
 import {ThemeContext} from "../Context/Context";
+import MySkeleton from "../MySkeleton/MySkeleton";
 import Plataforms from "../Plataforms/Plataforms";
 const GameCard = ({ gameData, listNumber, isLoading }) => {
   

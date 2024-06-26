@@ -34,7 +34,7 @@ export const DashBoard = () => {
       <LogoutModal />
       <div className="game-box">
         {games.map((game, index) => (
-          <GameCard key={index} gameData={game} listNumber={index + 1} />
+          <GameCard key={index} gameData={game} listNumber={index + 1} isLoading={isLoading} />
         ))}
       </div>
     </div>
