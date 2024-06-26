@@ -23,7 +23,7 @@ const GameCard = ({ gameData, listNumber, isLoading }) => {
         ) : (
           <div className="loading-content">
             <h1 className="Title">{gameData?.name}</h1>
-            <Plataforms plataforms={gameData?.parent_platforms} />
+            <Plataforms plataforms={gameData?.parent_platforms}/>
             <p>#{listNumber}</p>
             <div className="details-block">
               <p>Realase Date: {gameData?.released}</p>
