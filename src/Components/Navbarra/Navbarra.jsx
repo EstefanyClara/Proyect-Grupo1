@@ -5,6 +5,11 @@ import { Form, FormControl, Modal, Button} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-router-dom';
 import Switch from "../../Components/Switch/Switch";
+//importaciones de firebase
+import appFirebase from "../../credenciales";
+import { getAuth, signOut } from "firebase/auth";
+const auth = getAuth(appFirebase);
+
 
 export const Navbarra = ({isPlain}) => {
   const [showModal, setShowModal] = useState(false);
@@ -47,9 +52,7 @@ export const Navbarra = ({isPlain}) => {
           <Button variant='primary' onClick={handleClose}>
             Naah, Just Kidding
           </Button>
-          <Button variant="outline-secondary" onClick={handleLogout}>
-           <NavLink to="/" className="nav-link">Yes, Log Me Out</NavLink>
-          </Button>
+          <Button variant="outline-secondary" onClick={()=> signOut(auth)}>Yes log me out</Button>
         </Modal.Footer>   
       </Modal> 
     </nav>} 

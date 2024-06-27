@@ -4,6 +4,8 @@ import { LogoutModal } from "../../Components/LogoutModal/LogoutModal";
 import { Navbarra } from "../../Components/Navbarra/Navbarra";
 import { FaBullseye } from "react-icons/fa6";
 
+
+
 export const DashBoard = () => {
   return (
     <div>
