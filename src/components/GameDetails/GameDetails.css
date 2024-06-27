@@ -1,0 +1,30 @@
+.container {
+    width: 100vw;
+    min-height: 94vh;
+    background: black;
+    justify-content: center;
+    margin: auto;
+}
+
+.game-details {
+    background-size: cover;
+    width: 100%;
+    min-height: 700px;
+    object-fit: scale-down;
+}
+
+.game-details-light {
+    /* Add specific styles for light theme if needed */
+}
+
+.game-details-dark {
+    /* Add specific styles for dark theme if needed */
+}
+
+.loading-content {
+    padding: 5rem 0 0 3rem;
+}
+
+.Title {
+    color: white;
+}

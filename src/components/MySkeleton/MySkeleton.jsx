@@ -2,7 +2,7 @@ import React from 'react';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-const SkeletonCard = ({
+const MySkeleton = ({
   width = 363,
   height = 314,
   numOfLines = 3,
@@ -12,6 +12,8 @@ const SkeletonCard = ({
   backgroundColor = '#f0f0f0',
 }) => {
   return (
+
+    //TODO : Make more skeletons options not only cards
     <div
       className="skeleton-card"
       style={{
@@ -26,10 +28,11 @@ const SkeletonCard = ({
     >
       <Skeleton height={height / 2} />
       <div style={{ marginTop: '16px' }}>
+        
         <Skeleton count={numOfLines} height={lineHeight} />
       </div>
     </div>
   );
 };
 
-export default SkeletonCard;
+export default MySkeleton;
