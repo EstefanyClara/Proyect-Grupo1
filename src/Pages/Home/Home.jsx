@@ -38,7 +38,7 @@ const Home = () => {
     <div className={"container-" + themeSettings.mode}>
       <Navbarra isPlain={true}/>
         <div className="main-container">
-          <div className="login-container" >
+          <div className={"login-container-"+ themeSettings.mode }>
             <h2>Welcome! Log in or register</h2>
             <p>Log in to find the games you are looking for</p>
               <form onSubmit={functAutentication}> 
@@ -46,11 +46,11 @@ const Home = () => {
                 <input type="password" placeholder="Password" required id="password"/>
                     <Button type="submit" estilo={"custom-button-ligth"}>{registrando ? "Registrate": "Inicia sesion"}</Button>
               </form> 
-              <h5 className="texto">{registrando ? "Si ya tienes cuenta" : "Si no tienes cuenta"}<button className="btnRegistrarse" onClick={()=> setRegistrando(!registrando)}>{registrando ? "Inicia sesion" : "Registrate" }</button></h5>
+              <h5 className={"texto-"+ themeSettings.mode }>{registrando ? "Si ya tienes cuenta" : "Si no tienes cuenta"}<button className="btnRegistrarse" onClick={()=> setRegistrando(!registrando)}>{registrando ? "Inicia sesion" : "Registrate" }</button></h5>
                 <div className="separator">
-                  <span>or</span>
+                  <span className={"separador-"+themeSettings.mode} >or</span>
                 </div>
-                <div className="social-media-buttons">
+                <div className={"social-media-buttons-"+ themeSettings.mode}>
                   <Button iconName="facebook" iconColor="#f09" iconSize="24">Login with Facebook{" "}</Button>
                   <Button estilo={"social-media-style-button-ligth"} iconName="twitter" iconColor="#f09" iconSize="24"> Login with Twitter{" "}</Button>
                   <Button estilo={"social-media-style-button-ligth"} iconName="google" iconColor="#f09" iconSize="24" > Login with Google{" "} </Button>

@@ -17,7 +17,17 @@
   width: 100%;
 }
 
-.login-container {
+.login-container-light {
+  background-color: #F0F0F0;
+  padding: 20px;
+  border-radius: 20px;
+  width: 400px;
+  color: #fff;
+  margin-right: 100px;
+  margin-top: 30px;
+ 
+}
+.login-container-dark {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
   border-radius: 20px;
@@ -27,20 +37,40 @@
   margin-top: 30px;
  
 }
-
-.login-container h2 {
+.login-container-light h2 {
+  color: #515151;
   margin: 0 0 20px;
   font-size: 24px;
   text-align: center;
 }
-.login-container p {
+
+.login-container-dark h2 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  text-align: center;
+}
+.login-container-light p {
+  color: #515151;
+  margin: 0 0 20px;
+  text-align: center;
+}
+.login-container-dark p {
   margin: 0 0 20px;
   text-align: center;
 }
 
 
-.login-container input[type="email"],
-.login-container input[type="password"] {
+.login-container-light input[type="email"],
+.login-container-light input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  margin: 10px 0;
+  border: white 1px solid;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+.login-container-dark input[type="email"],
+.login-container-dark input[type="password"] {
   width: 100%;
   padding: 5px;
   margin: 10px 0;
@@ -48,7 +78,7 @@
   border-radius: 10px;
 }
 
-.login-container .remember-me {
+.login-container-dark .remember-me {
   display: flex;
   justify-content: space-between; /* Asegura que los elementos estén alineados a los extremos */
   align-items: center;
@@ -63,7 +93,19 @@
 }
 
 
-.login-container button {
+.login-container-light button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  justify-content: center;
+  background-color: #00bfa5;
+}
+.login-container-dark button {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -81,13 +123,24 @@
   text-decoration: none;
 }
 
-.social-media-buttons button {
+.social-media-button-light button {
   width: 100%;
   padding: 20px;
   margin: 20px 0;
   border: none;
   border-radius: 5px;
-  color: white;
+  color: rgb(240, 233, 233);
+  font-size: 16px;
+  cursor: pointer;
+  justify-content: center;
+}
+.social-media-button-dark button {
+  width: 100%;
+  padding: 20px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 5px;
+  color: rgb(201, 12, 59);
   font-size: 16px;
   cursor: pointer;
   justify-content: center;
@@ -108,11 +161,12 @@
   margin: 20px 0;
 }
 
+
 .separator::before,
 .separator::after {
   content: '';
   flex: 1;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #9e9b9b;
 }
 
 .separator:not(:empty)::before {
@@ -123,12 +177,17 @@
   margin-left: .25em;
 }
 
-.separator span {
-  color: #ffffff;
+.separador-light{
+  color: #242222;
+  padding: 0 10px;
+}
+.separador-dark{
+  color: #f0eded;
   padding: 0 10px;
 }
 
-.texto {
+.texto-light {
+  color: #515151;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,6 +196,16 @@
   flex-direction: column;
   text-align: center;
 }
+.texto-dark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 20px;
+  flex-direction: column;
+  text-align: center;
+}
+
 
 .texto .btnRegistrarse {
   background-color: #1c3cce;

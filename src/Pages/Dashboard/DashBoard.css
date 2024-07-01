@@ -1,12 +1,31 @@
-
-
-.custom-background-lihgt{
-    background: #f9f9f9;
+.background-light {
+    background: #F0F0F0;
     color: #333333;
-}
-
-.custom-background-dark{
-    background: #333333;
+  }
+  
+  .background-dark {
+    background: #151515;
     color: #f9f9f9;
-    
-}
+    background-size: cover;
+    min-height: 100vh;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .sidebar {
+    flex: 0 0 250px;
+    padding-right: 20px;
+  }
+  
+  .main-content {
+    flex: 1;
+  }
+  .alineacion{
+    display: flex;
+    justify-content: right;
+    margin-top: 0%;
+  }
+  
