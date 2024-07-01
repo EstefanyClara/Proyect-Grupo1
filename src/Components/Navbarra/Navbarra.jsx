@@ -9,16 +9,15 @@ import Switch from "../../Components/Switch/Switch";
 import appFirebase from "../../credenciales";
 import { getAuth, signOut } from "firebase/auth";
 const auth = getAuth(appFirebase);
+import { useContext } from 'react';
+import { ThemeContext } from '../Context/Context';
 
 
 export const Navbarra = ({isPlain}) => {
   const [showModal, setShowModal] = useState(false);
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
-  const handleLogout = () => {
-    console.log('Logging out');
-    handleClose();
-  };
+  
 
     
   return (
@@ -28,7 +27,7 @@ export const Navbarra = ({isPlain}) => {
       <div>
         <img src="src\assets\images\GAMEFINDER.png" alt="Logo" className="logo-image" />
       </div>
-      <Switch ></Switch>        
+        <Switch/>
     </div>
     :
     <nav>
@@ -43,6 +42,7 @@ export const Navbarra = ({isPlain}) => {
         <Button variant="outline-light" onClick={handleShow} className="logout-button">Log out</Button>
           <img className='userImage' src="src\assets\images\user.png" alt="Log out" />
         </li>
+        <Switch/>
       </ul> 
 
       <Modal show={showModal} onHide={handleClose}>

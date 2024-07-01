@@ -4,7 +4,7 @@
   height: 47px;
   gap: 0px;
   border-radius: 6px 0px 0px 0px;
-  background: #4CC986;
+  background: #000000;
   border: none;
   cursor: pointer;
   transition: opacity 0.3s ease;
@@ -18,7 +18,7 @@
   height: 47px;
   gap: 0px;
   border-radius: 6px 0px 0px 0px;
-  background: #c94c4c;
+  background: #fffdfd;
   border: none;
   cursor: pointer;
   transition: opacity 0.3s ease;

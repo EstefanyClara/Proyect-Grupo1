@@ -1,11 +1,8 @@
-import { React, useState } from "react";
-import { Routes, Link } from "react-router-dom";
+import { useState, useContext } from "react";
 import { ThemeContext } from "../../Components/Context/Context";
-import MyInput from "../../Components/MyInput/MyInput";
 import Button from "../../Components/Buttons/Button"
 import "./Home.css";
 import Navbarra from "../../Components/Navbarra/Navbarra";
-
 //imports de firebase
 import appFirebase from "../../credenciales";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from "firebase/auth";
@@ -13,8 +10,8 @@ const auth = getAuth(appFirebase);
 
 
 const Home = () => {
-  const [show, setShow] = useState(true);
-  
+  //const [show, setShow] = useState(true);
+  const themeSettings = useContext(ThemeContext);
   //firebase
   const [registrando, setRegistrando] = useState(false);
   const functAutentication = async (e) => {
@@ -38,18 +35,18 @@ const Home = () => {
   }
 
   return (
-    <div>
+    <div className={"container-" + themeSettings.mode}>
       <Navbarra isPlain={true}/>
         <div className="main-container">
-          <div className="login-container">
+          <div className="login-container" >
             <h2>Welcome! Log in or register</h2>
-            <p>Log in to find the games you're looking for</p>
+            <p>Log in to find the games you are looking for</p>
               <form onSubmit={functAutentication}> 
                 <input type="email" placeholder="Email" required id="email"/>
                 <input type="password" placeholder="Password" required id="password"/>
                     <Button type="submit" estilo={"custom-button-ligth"}>{registrando ? "Registrate": "Inicia sesion"}</Button>
               </form> 
-              <h4 className="texto">{registrando ? "Si ya tienes cuenta" : "Si no tienes cuenta"}<Button onClick={()=> setRegistrando(!registrando)}>{registrando ? "Inicia sesion" : "Registrate" }</Button></h4>
+              <h5 className="texto">{registrando ? "Si ya tienes cuenta" : "Si no tienes cuenta"}<button className="btnRegistrarse" onClick={()=> setRegistrando(!registrando)}>{registrando ? "Inicia sesion" : "Registrate" }</button></h5>
                 <div className="separator">
                   <span>or</span>
                 </div>

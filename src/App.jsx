@@ -1,6 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { useState } from 'react'
-import GameDetails from './Pages/GameDetails/GameDetails'
+import { useState, useEffect } from 'react'
 import { ThemeContext } from './Components/Context/Context'
 import DashBoard from "./Pages/Dashboard/DashBoard"
 import './App.css'
@@ -25,22 +23,22 @@ function App() {
   });
 
   const [usuario, setUsuario] = useState(null); //El estado usuario se inicializa en null
-  onAuthStateChanged(auth, (usuarioFirebase) => { //escuchando los cambios en la autenticación
-    if(usuarioFirebase){
-      setUsuario(usuarioFirebase); 
-    } else{
-      setUsuario(null); //sino esta logeado la variable usuario se inicializa en null
-    }
-  });
+ 
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (usuarioFirebase) => {
+      if (usuarioFirebase) {
+        setUsuario(usuarioFirebase);
+      } else {
+        setUsuario(null);
+      }
+    });
+
+    // Limpieza del listener de autenticación cuando el componente se desmonte
+    return () => unsubscribe();
+  }, []);
   
   return (
-    /*<ThemeContext.Provider value={themeSettings}>
-      <Routes>
-        <Route element={<Home />} path="/" exact />
-        <Route element={<DashBoard />} path="/dashboard" exact />
-        <Route element={<GameDetails />} path="/gamedetails" exact />
-      </Routes>
-    </ThemeContext.Provider>*/
+   
     <ThemeContext.Provider value={themeSettings}>
       {usuario ? <DashBoard/> : <Home/>}
     </ThemeContext.Provider>

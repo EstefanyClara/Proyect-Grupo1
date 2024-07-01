@@ -1,8 +1,17 @@
-body{
+
+.container-light {
+  background-image: url("src/assets/images/background-light.jpeg");
+  background-size: cover;
+  height: 100vh;
+}
+.container-dark {
   background-image: url("src/assets/images/background-dark.jpeg");
   background-size: cover;
+  height: 100vh;
 }
-.main-container {
+
+/*Este main container es para alinear a la derecha el login*/
+.main-container { 
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -11,11 +20,12 @@ body{
 .login-container {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   width: 400px;
   color: #fff;
   margin-right: 100px;
-  margin-top: 100px;
+  margin-top: 30px;
+ 
 }
 
 .login-container h2 {
@@ -32,7 +42,7 @@ body{
 .login-container input[type="email"],
 .login-container input[type="password"] {
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   margin: 10px 0;
   border: white 1px solid;
   border-radius: 10px;
@@ -52,9 +62,6 @@ body{
   color: #ffffff;
 }
 
-.login-container input[type="checkbox"] {
-  margin-right: 10px;
-}
 
 .login-container button {
   width: 100%;
@@ -120,6 +127,28 @@ body{
   color: #ffffff;
   padding: 0 10px;
 }
+
+.texto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 20px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.texto .btnRegistrarse {
+  background-color: #1c3cce;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  width: auto;
+}
+
+
 
 @media (max-width: 768px) {
   .main-container {
