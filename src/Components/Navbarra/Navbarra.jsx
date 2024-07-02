@@ -3,22 +3,21 @@ import { Link } from 'react-router-dom'
 import "./Navbarra.css"
 import { Form, FormControl, Modal, Button} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { NavLink } from 'react-router-dom';
 import Switch from "../../Components/Switch/Switch";
 //importaciones de firebase
 import appFirebase from "../../credenciales";
 import { getAuth, signOut } from "firebase/auth";
 const auth = getAuth(appFirebase);
+import MyModal from "../../Components/Modal/MyModal";
+
+
 
 
 export const Navbarra = ({isPlain}) => {
   const [showModal, setShowModal] = useState(false);
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
-  const handleLogout = () => {
-    console.log('Logging out');
-    handleClose();
-  };
+  
 
     
   return (
@@ -28,7 +27,7 @@ export const Navbarra = ({isPlain}) => {
       <div>
         <img src="src\assets\images\GAMEFINDER.png" alt="Logo" className="logo-image" />
       </div>
-      <Switch ></Switch>        
+        <Switch/>
     </div>
     :
     <nav>
@@ -43,18 +42,9 @@ export const Navbarra = ({isPlain}) => {
         <Button variant="outline-light" onClick={handleShow} className="logout-button">Log out</Button>
           <img className='userImage' src="src\assets\images\user.png" alt="Log out" />
         </li>
+        <Switch/>
       </ul> 
-
-      <Modal show={showModal} onHide={handleClose}>
-        <img className='iconLogout' src='src\assets\images\man-and-opened-exit-door.png'/>
-        <Modal.Body className='modalText'>Oh no! You are leaving...<br/>Are you sure? </Modal.Body>
-        <Modal.Footer className='modal-footer-vertical'>
-          <Button variant='primary' onClick={handleClose}>
-            Naah, Just Kidding
-          </Button>
-          <Button variant="outline-secondary" onClick={()=> signOut(auth)}>Yes log me out</Button>
-        </Modal.Footer>   
-      </Modal> 
+      <MyModal show={showModal} handleClose={handleClose} />
     </nav>} 
 
     </>

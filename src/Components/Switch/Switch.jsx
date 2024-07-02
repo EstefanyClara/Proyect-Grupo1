@@ -3,7 +3,7 @@ import "./Switch.css";
 import { useContext } from "react";
 import { ThemeContext } from "../Context/Context";
 
-const Switch = ({}) => {
+const Switch = () => {
   const themeSettings = useContext(ThemeContext);
 
   return (

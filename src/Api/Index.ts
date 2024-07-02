@@ -4,8 +4,7 @@ export async function getGames() {
     const response = await fetch(url);
     if (response.ok) {
       const payload = await response.json();
-      console.log(payload);
-      return payload;
+      return payload.results;
     } else {
       console.error("An error happened");
       return [];
