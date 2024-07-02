@@ -7,6 +7,8 @@ import { Navbarra } from "../../Components/Navbarra/Navbarra";
 import GameCard from "../../Components/GameCard/GameCard";
 import { getGames } from "../../Api/Index";
 
+
+
 export const DashBoard = () => {
   const [games, setGames] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
