@@ -1,11 +1,11 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { useState } from 'react'
-import GameDetails from './Pages/GameDetails/GameDetails'
-import { ThemeContext } from './Components/Context/Context'
-import DashBoard from "./Pages/Dashboard/DashBoard"
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import { ThemeContext } from "./Components/Context/Context";
+import "./App.css";
 // Pages
-import Home from './Pages/Home/Home'
+import GameDetails from "./Pages/GameDetails/GameDetails";
+import DashBoard from "./Pages/Dashboard/DashBoard";
+import Home from "./Pages/Home/Home";
 //importando los modulos de firebase
 import appFirebase from "./credenciales";
 import { getAuth, onAuthStateChanged } from "firebase/auth"; //getAuth traerá el objeto de autenticación y onAuthStateChanged se encargará de escuchar los cambios en la autenticación
@@ -13,14 +13,13 @@ import { getAuth, onAuthStateChanged } from "firebase/auth"; //getAuth traerá e
 const auth = getAuth(appFirebase);
 
 function App() {
-
   const [themeSettings, setThemeSettings] = useState({
     mode: "light",
     switchMode: () => {
-      setThemeSettings((prevState)=>({
+      setThemeSettings((prevState) => ({
         ...prevState,
         mode: prevState.mode === "light" ? "dark" : "light",
-      }));   
+      }));
     },
   });
 
@@ -44,7 +43,7 @@ function App() {
     <ThemeContext.Provider value={themeSettings}>
       {usuario ? <DashBoard/> : <Home/>}
     </ThemeContext.Provider>
-  )
+  );
 }
 
-export default App
+export default App;

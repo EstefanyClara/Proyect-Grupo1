@@ -10,3 +10,10 @@
     color: #f9f9f9;
     
 }
+
+.game-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
