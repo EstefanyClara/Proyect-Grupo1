@@ -76,44 +76,6 @@ img{
 .icon{
     width: 50px;
 }
-.iconLogout{
-    width: 50%;
-    align-self: center;
-    margin-top: 5%;
-}
-
-.modalText{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-    font-size: larger;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 5%;
-}
-
-.modal-footer-vertical {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; /* Espacio entre los botones */
-}
-
-.modal-footer-vertical .btn {
-    width: 100%; /* Opcional: Si quieres que los botones sean del mismo ancho */
-    max-width: 300px; /* Ajusta según sea necesario */
-    border-radius: 20px;
-    padding: 10px;
-}
-
-.modal-footer-vertical .btn-primary {
-    background: linear-gradient(180deg, #36B972 50%, #0EA152 100%);
-    border: none;
-    color: white;
-}
-
 .plain-mode-dark{
     display: flex;
     justify-content: space-between;
@@ -131,7 +93,7 @@ img{
 }
 
 .logo-image {
-    width: 250px; /* Puedes ajustar estos valores según tus necesidades */
-    height: auto; /* Mantiene la proporción de la imagen */
+    width: 250px; 
+    height: auto; 
     margin-top: 10px;
   }

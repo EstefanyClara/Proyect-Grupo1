@@ -22,7 +22,7 @@
   padding: 20px;
   border-radius: 20px;
   width: 400px;
-  color: #fff;
+  color: #524e4e;
   margin-right: 100px;
   margin-top: 30px;
  
@@ -68,6 +68,7 @@
   border: white 1px solid;
   border-radius: 10px;
   background-color: #ffffff;
+  color: #242222;
 }
 .login-container-dark input[type="email"],
 .login-container-dark input[type="password"] {
