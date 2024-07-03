@@ -65,7 +65,7 @@ export const DashBoard = () => {
       <p> Based on player counts and release date</p>
       <div className="alineacion">
         <LogoutModal />
-        <div className="container">
+        <div className="dashboard-container">
           <div className="game-list">
             {isLoading ? (
               <p>Loading...</p>
