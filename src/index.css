@@ -1,29 +1,17 @@
 :root {
   /* --primary: #daffea; */
-  --primary-light-green:
-    #5FE19B;
-  --primary-dark-green:
-    #4CC986;
-  --secondary-light-blue:
-    #5F81FB;
-  --secondary-blue:
-    #1245C9;
-  --secondary-dark-blue:
-    #06207B;
-  --coral-reff:
-    #FB5F5F;
-  --hey-honey:
-    #FFDC22;
-  --black:
-    #151515;
-  --dark-gray:
-    #303030;
-  --medium-gray:
-    #515151;
-  --light-gray:
-    #939393; 
-  --light:
-    #FFFFFF;
+  --primary-light-green: #5fe19b;
+  --primary-dark-green: #4cc986;
+  --secondary-light-blue: #5f81fb;
+  --secondary-blue: #1245c9;
+  --secondary-dark-blue: #06207b;
+  --coral-reff: #fb5f5f;
+  --hey-honey: #ffdc22;
+  --black: #151515;
+  --dark-gray: #303030;
+  --medium-gray: #515151;
+  --light-gray: #939393;
+  --light: #ffffff;
 }
 
 :root {
@@ -53,36 +41,10 @@ a:hover {
 
 body {
   margin: 0;
-  
+
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
