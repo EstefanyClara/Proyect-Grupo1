@@ -4,7 +4,7 @@ export async function getGames() {
     const response = await fetch(url);
     if (response.ok) {
       const payload = await response.json();
-      return payload.results;
+      return payload;
     } else {
       console.error("An error happened");
       return [];
@@ -13,6 +13,8 @@ export async function getGames() {
     console.error(error);
   }
 };
+
+
 
 export async function getGame(gameID) {
   const key = "?key=f13a63b2d5ab4736a9ba944db1d8debb"

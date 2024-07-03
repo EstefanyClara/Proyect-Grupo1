@@ -29,3 +29,16 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+.custom-button-light-next {
+  float: right;
+  background-color: var(--coral-reff);
+  /* border: none; */
+  width: 10%;
+}
+.custom-button-dark-next {
+  float: right;
+  background-color: var(--coral-reff);
+  /* border: none; */
+  width: 10%;
+}
