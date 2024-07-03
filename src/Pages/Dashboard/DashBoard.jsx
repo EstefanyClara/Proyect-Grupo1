@@ -1,15 +1,14 @@
 import "./DashBoard.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaBullseye } from "react-icons/fa6";
 import { LogoutModal } from "../../Components/LogoutModal/LogoutModal";
 import { Navbarra } from "../../Components/Navbarra/Navbarra";
 import { ThemeContext } from "../../Components/Context/Context";
-import { useContext, useEffect, useState } from "react";
-import { getGames } from "../../Api/Index";
 import  GameCard  from "../../Components/Card/GameCard";
 import Button from "../../Components/Buttons/Button";
 import ModalGrande from "../../Components/ModalGrande/modalGrande";
+import { getGames } from "../../Api/Index";
 
 
 export const DashBoard = () => {
