@@ -4,10 +4,10 @@ import { useContext, useEffect, useState } from "react";
 import { LogoutModal } from "../../Components/LogoutModal/LogoutModal";
 import { Navbarra } from "../../Components/Navbarra/Navbarra";
 import { ThemeContext } from "../../Components/Context/Context";
-import { getGames } from "../../Api/Index";
 import GameCard from "../../Components/Card/GameCard";
 import Button from "../../Components/Buttons/Button";
 import ModalGrande from "../../Components/ModalGrande/modalGrande";
+import { getGames } from "../../Api/Index";
 
 export const DashBoard = () => {
   const themeSettings = useContext(ThemeContext);
