@@ -4,11 +4,10 @@ import { useContext, useState } from "react";
 import { ThemeContext } from "../Context/Context";
 import "./Plataforms.css";
 
-const Plataforms = ({ plataforms }) => {
-  const [plataformsName, setPlataformsName] = useState(getPlatforms(plataforms));
+const Plataforms = ({ platforms }) => {
+  const [plataformsName, setPlataformsName] = useState(getPlatforms(platforms));
   const themeSettings = useContext(ThemeContext);
   const path = "src/assets/icons/";
-  // console.log(plataformsName);
 
   return (
     <div className={"plataform-" + themeSettings.mode}>
@@ -21,16 +20,17 @@ const Plataforms = ({ plataforms }) => {
 
 function getPlatforms(platforms) {
   const namesPlatform = [];
+
   platforms.forEach((platformObj) => {
     namesPlatform.push(platformObj.platform.slug);
   });
-
-  return filterValidPlataforms(namesPlatform);
+  const onlyPlataformsWithIcons = filterValidPlatforms(namesPlatform);
+  return onlyPlataformsWithIcons;
 }
 
-function filterValidPlataforms(platforms) {
+function filterValidPlatforms(platforms) {
   const validPlatforms = ["pc", "playstation", "xbox"];
-  return platforms.filter((plataform) => plataform in validPlatforms);
+  return platforms.filter((platform) => validPlatforms.includes(platform));
 }
 
 export default Plataforms;

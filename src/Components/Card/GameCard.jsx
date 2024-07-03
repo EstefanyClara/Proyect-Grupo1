@@ -3,7 +3,7 @@ import { getGame } from "../../Api/Index";
 import "./GameCard.css";
 import { ThemeContext } from "../Context/Context";
 import Overlay from "../Overlay/Overlay";
-
+import Plataforms from "../Plataforms/Plataforms";
 const GameCard = ({ gameData }) => {
   // const [gameData, setGameData] = useState(null);
   // const [isLoading, setIsLoading] = useState(true);
@@ -26,18 +26,26 @@ const GameCard = ({ gameData }) => {
   //   fetchGameData();
   // }, [gameId]);
 
-
-
   return (
     <>
       <div className={`card-${themeSettings.mode}`}>
-        <img src={gameData.background_image} alt={gameData.name} />
+        <img
+          src={gameData.background_image}
+          alt={gameData.name}
+          className="card-image"
+        />
         <div className="card-content">
           <h2>{gameData.name}</h2>
           <p className="ranking">#{gameData.rating}</p>
-          <p className="release-date">Release date: {gameData.released}</p>
+          <div className="card-details">
+            <p className="release-date">
+              <span className="label">Release date:</span> {gameData.released}
+            </p>
+            <Plataforms platforms={gameData.platforms} />
+          </div>
           <p className="genres">
-            Genres: {gameData.genres.map((genre) => genre.name).join(", ")}
+            <span className="label">Genres</span>:{" "}
+            {gameData.genres.map((genre) => genre.name).join(", ")}
           </p>
         </div>
       </div>
