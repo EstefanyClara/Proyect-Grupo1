@@ -6,7 +6,8 @@ import { ThemeContext } from "../../Components/Context/Context";
 import { useContext, useEffect, useState } from "react";
 import { getGames } from "../../Api/Index";
 import  GameCard  from "../../Components/Card/GameCard";
-
+import Button from "../../Components/Buttons/Button";
+import ModalGrande from "../../Components/ModalGrande/modalGrande";
 
 
 export const DashBoard = () => {
@@ -14,6 +15,7 @@ export const DashBoard = () => {
   const [gameList, setGameList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedGame, setSelectedGame] = useState(null);
 
   useEffect(() => {
     const fetchGameData = async () => {
@@ -27,6 +29,14 @@ export const DashBoard = () => {
     }; 
     fetchGameData();
   }, []);
+
+  const handleCardClick = (game) => {
+    setSelectedGame(game);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedGame(null);
+  };
 
   return (
     <div className={"background-" + themeSettings.mode}> 
@@ -43,12 +53,13 @@ export const DashBoard = () => {
           <p>{error}</p>
         ) : (
           gameList.map((game) => (
-            <GameCard key={game.id} gameId={game.id} />
+            <GameCard key={game.id} gameId={game.id} onClick={()=> handleCardClick(game)}  />
           ))
         )}
         </div>
       </div>
     </div>
+    {selectedGame && <ModalGrande game={selectedGame} onClose={handleCloseModal} />}
     </div> 
   );
 };

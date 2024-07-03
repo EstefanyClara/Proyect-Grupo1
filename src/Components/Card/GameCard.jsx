@@ -3,7 +3,7 @@ import { getGame } from '../../Api/Index';
 import './GameCard.css';
 import { ThemeContext } from '../Context/Context';
 
-const GameCard = ({ gameId }) => {
+const GameCard = ({ gameId, onClick }) => {
   const [gameData, setGameData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -26,7 +26,7 @@ const GameCard = ({ gameId }) => {
   }
 
   return (
-    <div className={"card-"+themeSettings.mode }>
+    <div className={"card-"+themeSettings.mode } onClick={onClick}>
       <img src={gameData.background_image} alt={gameData.name} />
       <div className='card-content'>
         <h2>{gameData.name}</h2>

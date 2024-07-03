@@ -1,4 +1,4 @@
-.modalText{
+.modalText-light{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,23 +8,58 @@
     font-weight: bold;
     text-align: center;
     margin-top: 5%;
+    background-color: rgb(255, 255, 255);
+}
+.modalText-dark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+    background-color: black;
+    font-color: white;
 }
 
-.modal-footer-vertical {
+.modal-footer-vertical-dark {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px; 
+    background-color: black;
+   
+}
+.modal-footer-vertical-light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+    background-color: rgb(244, 244, 244);
+   
 }
 
-.modal-footer-vertical .btn {
+.modal-footer-vertical-light .btn {
+    width: 100%; 
+    max-width: 300px; 
+    border-radius: 20px;
+    padding: 10px;
+}
+.modal-footer-vertical-dark .btn {
     width: 100%; 
     max-width: 300px; 
     border-radius: 20px;
     padding: 10px;
 }
 
-.modal-footer-vertical .btn-primary {
+.modal-footer-vertical-dark .btn-primary {
+    background: linear-gradient(180deg, #36B972 50%, #0EA152 100%);
+    border: none;
+    color: white;
+}
+.modal-footer-vertical-light .btn-primary {
     background: linear-gradient(180deg, #36B972 50%, #0EA152 100%);
     border: none;
     color: white;
