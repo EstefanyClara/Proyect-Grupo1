@@ -7,7 +7,7 @@ import { ThemeContext } from "../Context/Context";
 const Button = ({ onClick, children, iconName, iconColor, iconSize}) => {
   const themeSettings = useContext(ThemeContext);
   return (
-    <button className={'social-media-style-button-' + themeSettings.mode } onClick={onClick}>
+    <button className={'custom-button-' + themeSettings.mode } onClick={onClick}>
       {iconName && <IconUsage  uid={iconName} color={iconColor} size={iconSize} valign="middle" />}
       {children}
     </button>

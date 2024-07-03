@@ -17,7 +17,7 @@ export async function getGames() {
 export async function getGame(gameID) {
   const key = "?key=f13a63b2d5ab4736a9ba944db1d8debb"
   const url = 'https://api.rawg.io/api/games/' + gameID + key
-  console.log(url)
+  // console.log(url)
   try {
     let response = await fetch(url);
     if (response.ok) {
