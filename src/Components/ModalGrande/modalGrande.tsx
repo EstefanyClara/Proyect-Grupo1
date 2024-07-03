@@ -1,33 +1,40 @@
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import React from 'react';
+import './modal.css';
+import { getGame } from '../../Api/Index';
+import { useEffect, useState, useContext } from 'react';
 
-function Example() {
-  const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+const ModalGrande = ({ game, onClose }) => {
+ const [gameData, setGameData] = useState(null);
+ 
+
+  useEffect(() => {
+    const fetchGameData = async () => {
+      try {
+        const data = await getGame(game.id);
+        setGameData(data);
+      } catch (error) {
+        console.error('Error fetching game data:', error);
+      }
+    };
+    fetchGameData();
+  }, []);
 
   return (
-    <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button>
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <button className="modal-close" onClick={onClose}>X</button>
+        <img src={gameData?.background_image} alt={gameData?.name} />
+        <h2>{gameData?.name}</h2>
+        <p className="relase">Release date: {gameData?.released}</p>
+        <p className="generes">Genres: {gameData?.genres.map(genre => genre.name).join(', ')}</p>
+        <p className="rating">Rating: {gameData?.rating}</p>
+        <p className="modal-description">Description:{gameData?.description}</p>
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
+        
+      </div>
+    </div>
   );
-}
+};
+
+export default ModalGrande;

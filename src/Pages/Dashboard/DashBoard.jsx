@@ -7,6 +7,7 @@ import { ThemeContext } from "../../Components/Context/Context";
 import { getGames } from "../../Api/Index";
 import GameCard from "../../Components/Card/GameCard";
 import Button from "../../Components/Buttons/Button";
+import ModalGrande from "../../Components/ModalGrande/modalGrande";
 
 export const DashBoard = () => {
   const themeSettings = useContext(ThemeContext);
@@ -14,6 +15,7 @@ export const DashBoard = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [nextPage, setNextPage] = useState(null); // URL de la siguiente página de la API
+  const [selectedGame, setSelectedGame] = useState(null);
 
   useEffect(() => {
     const fetchGameData = async () => {
@@ -48,6 +50,14 @@ export const DashBoard = () => {
     }
   };
 
+  const handleCardClick = (game) => {
+    setSelectedGame(game);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedGame(null);
+  };
+
   return (
     <div className={"background-" + themeSettings.mode}>
       <Navbarra isPlain={false} />
@@ -62,11 +72,20 @@ export const DashBoard = () => {
             ) : error ? (
               <p>{error}</p>
             ) : (
-              gameList.map((game) => <GameCard key={game.id} gameData={game} />)
+              gameList.map((game) => (
+                <GameCard
+                  key={game.id}
+                  gameData={game}
+                  onClick={() => handleCardClick(game)}
+                />
+              ))
             )}
           </div>
         </div>
       </div>
+      {selectedGame && (
+        <ModalGrande game={selectedGame} onClose={handleCloseModal} />
+      )}
       {nextPage && (
         <Button
           onClick={handleLoadNextPage}
