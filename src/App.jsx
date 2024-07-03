@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { ThemeContext } from './Components/Context/Context'
-import DashBoard from "./Pages/Dashboard/DashBoard"
 import './App.css'
 // Pages
 import GameDetails from "./Pages/GameDetails/GameDetails";
