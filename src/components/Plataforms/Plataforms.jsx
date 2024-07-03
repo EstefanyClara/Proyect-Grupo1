@@ -30,7 +30,17 @@ function getPlatforms(platforms) {
 
 function filterValidPlatforms(platforms) {
   const validPlatforms = ["pc", "playstation", "xbox"];
-  return platforms.filter((platform) => validPlatforms.includes(platform));
+  const uniquePlatforms = new Set();
+
+  platforms.forEach((platform) => {
+    validPlatforms.forEach((validPlatform) => {
+      if (platform.includes(validPlatform)) {
+        uniquePlatforms.add(validPlatform);
+      }
+    });
+  });
+
+  return Array.from(uniquePlatforms);
 }
 
 export default Plataforms;
