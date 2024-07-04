@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 import { ThemeContext } from "./Components/Context/Context";
 import './App.css'
 // Pages
-import GameDetails from "./Components/GameDetails/GameDetails";
 import DashBoard from "./Pages/Dashboard/DashBoard";
 import Home from "./Pages/Home/Home";
 //importando los modulos de firebase
