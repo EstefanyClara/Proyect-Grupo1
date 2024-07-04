@@ -69,10 +69,9 @@
   margin: 5px 0;
 }
 
-.card-light .release-date,
-.card-light .genres {
+.card-light .text-details {
   font-size: 0.875rem;
-  color: #bbb;
+  color: var(--black);
 }
 
 .card-light .ranking {
@@ -109,15 +108,18 @@
   height: 20px;
 }
 
-.card-details{
+.card-details {
   display: flex;
   flex-direction: row;
-  
+
   justify-content: space-between;
   gap: 15px;
 }
 
-.label{
+.card-light .label {
+  color: var(--dark-gray);
+}
+
+.card-dark .label {
   color: var(--light-gray);
-  
 }

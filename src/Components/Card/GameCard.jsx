@@ -37,12 +37,12 @@ const GameCard = ({ gameData, onClick }) => {
           <h2>{gameData.name}</h2>
           <p className="ranking">#{gameData.rating}</p>
           <div className="card-details">
-            <p className="release-date">
+            <p className="text-details">
               <span className="label">Release date:</span> {gameData.released}
             </p>
             <Plataforms platforms={gameData.platforms} />
           </div>
-          <p className="genres">
+          <p className="text-details">
             <span className="label">Genres</span>:{" "}
             {gameData.genres.map((genre) => genre.name).join(", ")}
           </p>
