@@ -8,6 +8,7 @@ import GameCard from "../../Components/Card/GameCard";
 import Button from "../../Components/Buttons/Button";
 import ModalGrande from "../../Components/ModalGrande/modalGrande";
 import { getGames } from "../../Api/Index";
+import MySkeleton from "../../Components/MySkeleton/MySkeleton";
 
 export const DashBoard = () => {
   const themeSettings = useContext(ThemeContext);
@@ -68,7 +69,7 @@ export const DashBoard = () => {
         <div className="dashboard-container">
           <div className="game-list">
             {isLoading ? (
-              <p>Loading...</p>
+              <MySkeleton />
             ) : error ? (
               <p>{error}</p>
             ) : (

@@ -2,9 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import { getGame } from "../../Api/Index";
 import "./GameCard.css";
 import { ThemeContext } from "../Context/Context";
-import Overlay from "../Overlay/Overlay";
 import Plataforms from "../Plataforms/Plataforms";
-const GameCard = ({ gameData }) => {
+const GameCard = ({ gameData, onClick }) => {
   // const [gameData, setGameData] = useState(null);
   // const [isLoading, setIsLoading] = useState(true);
   // const [error, setError] = useState(null);
@@ -28,7 +27,7 @@ const GameCard = ({ gameData }) => {
 
   return (
     <>
-      <div className={`card-${themeSettings.mode}`}>
+      <div className={`card-${themeSettings.mode}`} onClick={onClick}>
         <img
           src={gameData.background_image}
           alt={gameData.name}
