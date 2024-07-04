@@ -1,41 +1,57 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { getGame } from '../../Api/Index';
-import './GameCard.css';
-import { ThemeContext } from '../Context/Context';
-
-const GameCard = ({ gameId, onClick }) => {
-  const [gameData, setGameData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+import React, { useState, useEffect, useContext } from "react";
+import { getGame } from "../../Api/Index";
+import "./GameCard.css";
+import { ThemeContext } from "../Context/Context";
+import Plataforms from "../Plataforms/Plataforms";
+const GameCard = ({ gameData, onClick }) => {
+  // const [gameData, setGameData] = useState(null);
+  // const [isLoading, setIsLoading] = useState(true);
+  // const [error, setError] = useState(null);
   const themeSettings = useContext(ThemeContext);
+  const [showOverlay, setShowOverlay] = useState(false);
 
-  useEffect(() => {
-    const fetchGameData = async () => {
-      try {
-        const data = await getGame(gameId);
-        setGameData(data);
-      } catch (error) {
-        console.error('Error fetching game data:', error);
-      }
-    };
-    fetchGameData();
-  }, [gameId]);
-
-  if (!gameData) {
-    return <div>Loading...</div>;
-  }
+  // useEffect(() => {
+  //   const fetchGameData = async () => {
+  //     try {
+  //       const data = await getGame(gameId);
+  //       setGameData(data);
+  //       setIsLoading(false);
+  //     } catch (error) {
+  //       console.error("Error fetching game data:", error);
+  //       setError(error);
+  //       setIsLoading(false);
+  //     }
+  //   };
+  //   fetchGameData();
+  // }, [gameId]);
 
   return (
-    <div className={"card-"+themeSettings.mode } onClick={onClick}>
-      <img src={gameData.background_image} alt={gameData.name} />
-      <div className='card-content'>
-        <h2>{gameData.name}</h2>
-        <p className='ranking'>#{gameData.rating}</p>
-        <p className='relase-date'>Release date: {gameData.released}</p>
-        <p className="genres">Generes: {gameData.genres.map(genre => genre.name).join(', ')}</p>
-        
+    <>
+      <div className={`card-${themeSettings.mode}`} onClick={onClick}>
+        <img
+          src={gameData.background_image}
+          alt={gameData.name}
+          className="card-image"
+        />
+        <div className="card-content">
+          <h2>{gameData.name}</h2>
+          <p className="ranking">#{gameData.rating}</p>
+          <div className="card-details">
+            <p className="text-details">
+              <span className="label">Release date:</span> {gameData.released}
+            </p>
+            <Plataforms platforms={gameData.platforms} />
+          </div>
+          <p className="text-details">
+            <span className="label">Genres</span>:{" "}
+            {gameData.genres.map((genre) => genre.name).join(", ")}
+          </p>
         </div>
       </div>
+      {showOverlay && (
+        <Overlay gameData={gameData} onClose={handleCloseOverlay} />
+      )}
+    </>
   );
 };
 

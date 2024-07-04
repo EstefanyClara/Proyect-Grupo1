@@ -1,9 +1,9 @@
 /* Estilo predeterminado para el botón */
 .custom-button-light {
-  width: 288px;
-  height: 47px;
+  width: 22.625rem;
+  height: 2.9375rem;
   gap: 0px;
-  border-radius: 6px 0px 0px 0px;
+  border-radius: 0.25rem;
   background: #000000;
   border: none;
   cursor: pointer;
@@ -11,23 +11,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .custom-button-dark {
+    background: #fffdfd;
+  }
 }
-
-.custom-button-dark{
-  width: 288px;
-  height: 47px;
-  gap: 0px;
-  border-radius: 6px 0px 0px 0px;
-  background: #fffdfd;
-  border: none;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
 
 /* Estilo específico para el botón de redes sociales */
 .social-media-style-button-light {
@@ -40,6 +28,17 @@
   border: 1px solid #fff;
   border-radius: 5px;
   cursor: pointer;
-
 }
 
+.custom-button-light-next {
+  float: right;
+  background-color: var(--coral-reff);
+  /* border: none; */
+  width: 10%;
+}
+.custom-button-dark-next {
+  float: right;
+  background-color: var(--coral-reff);
+  /* border: none; */
+  width: 10%;
+}
